@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=302-08;Database=Db_BlogCore;User=WebMobile_302;Password=webmobile.302;");
+			optionsBuilder.UseSqlServer("Server=305-08;Database=Db_BlogCoree;User=WebMobile_302;Password=webmobile.302;");
 	
 		}
 		public DbSet<About> Abouts{ get; set; }
@@ -22,7 +22,7 @@ namespace DataAccessLayer.Concrete
 		public DbSet<Contact> Contact { get; set; }
 		public DbSet<Writer> Writers { get; set; }
 
-
+		public DbSet<NewsLetter> NewsLetters { get; set; }
 
 
 
