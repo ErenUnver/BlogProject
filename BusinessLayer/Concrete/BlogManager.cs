@@ -48,7 +48,7 @@ namespace BusinessLayer.Concrete
 
         public List<Blog> GetListAll()
         {
-            throw new NotImplementedException();
+            return _blogDal.GetListAll();
         }
 
         public void Insert(Blog t)

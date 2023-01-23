@@ -12,9 +12,23 @@ namespace DataAccessLayer.Concrete
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=305-08;Database=Db_BlogCoree;User=WebMobile_302;Password=webmobile.302;");
+			optionsBuilder.UseSqlServer("Server=305-08;Database=Db_BlogCoree;User=WebMobile_302;Password=WebMobile.302;");
 	
 		}
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			modelBuilder.Entity<Message2>()
+				.HasOne(x=>x.SenderUser)
+				.WithMany(y=>y.WriterSender)
+				.HasForeignKey(z=>z.SenderID)
+				.OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Message2>()
+                .HasOne(x => x.ReceiverUser)
+                .WithMany(y => y.WriterReceiver)
+                .HasForeignKey(z => z.ReceiverID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
 		public DbSet<About> Abouts{ get; set; }
 		public DbSet<Blog> Blogs { get; set; }
 		public DbSet<Category> Categories { get; set; }
@@ -25,7 +39,10 @@ namespace DataAccessLayer.Concrete
 		public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<BlogReyting> BlogReytings { get; set; }
 
-
+		public DbSet<Notification> Notifications { get; set; }
+		public DbSet<Message> Messages { get; set; }
+		public DbSet<Message2> Message2s { get; set; }
+		public DbSet<Admin> Admins { get; set; }
 
 
 
