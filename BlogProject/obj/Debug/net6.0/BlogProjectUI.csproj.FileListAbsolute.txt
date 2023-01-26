@@ -848,3 +848,17 @@ C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\ne
 C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\XLParser.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\BlogAPI.deps.json
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\BlogAPI.runtimeconfig.json
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\BlogAPI.exe
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\BlogAPI.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\BlogAPI.pdb
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\eren.unver\Desktop\150Videoda Core\BlogProject\BlogProject\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

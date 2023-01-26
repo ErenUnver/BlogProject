@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "btCulnVlN1lzgVIasnzRVxUnWrAG21EPxfMGhcBZDCM=",
+  "Hash": "Jrzo0O9jQRUhoC2r74CxIcKjoVmtDo0p8XKuq6uDIWI=",
   "Source": "BlogProjectUI",
   "BasePath": "_content/BlogProjectUI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\eren.unver\\Desktop\\150Videoda Core\\BlogProject\\BlogAPI\\BlogAPI.csproj",
+      "Version": 2,
+      "Source": "BlogAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "BlogProjectUI\\wwwroot",
