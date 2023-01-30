@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogAPI.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(Contextt))]
     [Migration("20230125135213_mig1")]
     partial class mig1
     {

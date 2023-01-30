@@ -11,14 +11,14 @@ namespace BlogAPI.Controllers
         [HttpGet]
         public IActionResult EmployeeList()
         {
-            using var c = new Context();
+            using var c = new Contextt();
             var values = c.Employees.ToList();
             return Ok(values);
         }
         [HttpPost]
         public IActionResult EmployeeAdd(Employee employee)
         {
-            using var c = new Context();
+            using var c = new Contextt();
             c.Add(employee);
             c.SaveChanges();
             return Ok();
@@ -26,7 +26,7 @@ namespace BlogAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult EmployeeGet(int id) 
         {
-            using var c = new Context();
+            using var c = new Contextt();
             var employee = c.Employees.Find(id);
             if (employee==null)
             {
@@ -40,7 +40,7 @@ namespace BlogAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult EmployeeDelete(int id)
         {
-            using var c = new Context();
+            using var c = new Contextt();
             var employee = c.Employees.Find(id);
             if (employee == null)
             {
@@ -56,7 +56,7 @@ namespace BlogAPI.Controllers
         [HttpPut]
         public IActionResult EmployeeUpdate(Employee employee)
         {
-            using var c = new Context();
+            using var c = new Contextt();
             var emp = c.Find<Employee>(employee.Id);
             if (emp == null)
             {
