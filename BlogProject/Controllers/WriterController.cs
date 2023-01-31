@@ -6,6 +6,7 @@ using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogProjectUI.Controllers
@@ -14,13 +15,21 @@ namespace BlogProjectUI.Controllers
 	public class WriterController : Controller
 	{
 		WriterManager wm = new WriterManager(new EfWriter());
-        [Authorize]
+		Context c = new Context();
+        private readonly UserManager<AppUser> _userManager;
+
+		public WriterController(UserManager<AppUser> userManager)
+		{
+			_userManager = userManager;
+		}
+
+		[Authorize]
         public IActionResult Index()
 		{
             var userMail = User.Identity.Name;
             ViewBag.v = userMail;
 
-            Context c = new Context();
+            
             var writerName=c.Writers.Where(x=>x.WriterMail==userMail).Select(y=>y.WriterName).FirstOrDefault();
             ViewBag.v2 = writerName;
 
@@ -45,12 +54,18 @@ namespace BlogProjectUI.Controllers
 		[AllowAnonymous]
         public IActionResult WriterEditProfile() 
 		{
-            var userMail = User.Identity.Name;
-            Context c = new Context();
-            var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
+            var username = User.Identity.Name;
+            var userMail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            UserManager userManager = new UserManager(new EfUser());
+			//         var writerId = c.Writers.Where(x => x.WriterMail == userMail).Select(y => y.WriterID).FirstOrDefault();
 
-            var writerValues = wm.GetById(writerId);
-			return View(writerValues);
+			//         var writerValues = wm.GetById(writerId);
+			//return View(writerValues);
+			var id = c.Users.Where(x => x.Email == userMail).Select(y => y.Id).FirstOrDefault();
+			var values = userManager.GetById(id);
+			return View(values);
+
+			
 		}
         [AllowAnonymous]
         [HttpPost]
