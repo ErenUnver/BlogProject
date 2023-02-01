@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Concrete.Writer
+﻿@model EntityLayer.Concrete.AppUser
 @{
     ViewData["Title"] = "WriterEditProfile";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
@@ -13,19 +13,23 @@
                 <h4 class="card-title">Yazar Profil Güncelleme</h4>
               <br/>
               
-                @Html.HiddenFor(x=>x.WriterID)
+                @Html.HiddenFor(x=>x.Id)
                     <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
-                        @Html.TextBoxFor(x=>x.WriterName,new {@class="form control"})
+                        <label for="exampleInputName1">Name&Surname</label>
+                        @Html.TextBoxFor(x=>x.NameSurname,new {@class="form control"})
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail3">Email address</label>
-                        @Html.TextBoxFor(x=>x.WriterMail,new {@class="form control"})
+                        <label for="exampleInputEmail3">UserName</label>
+                        @Html.TextBoxFor(x=>x.UserName,new {@class="form control"})
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword4">Password</label>
-                        @Html.TextBoxFor(x=>x.WriterPassword,new {@class="form control"})
+                        <label for="exampleInputPassword4">Email Adress</label>
+                        @Html.TextBoxFor(x=>x.Email,new {@class="form control"})
                     </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Password</label>
+                    @Html.TextBoxFor(x=>x.PasswordHash,new {@class="form control"})
+                </div>
                     
                     <div class="form-group">
                         <label>Yazar Görseli</label>
@@ -38,11 +42,11 @@
                         </div>
                     </div>
               
-                    <div class="form-group">
+                   @* <div class="form-group">
                         <label for="exampleTextarea1">Yazar Hakkında</label>
                         @Html.TextAreaFor(x=>x.WriterName,10,3, new {@class="form control"})
 
-                    </div>
+                    </div>*@
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
              

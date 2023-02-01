@@ -41,6 +41,11 @@ namespace BlogProjectUI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> LogOut()
+        {
+            await _singInManager.SignOutAsync();
+            return RedirectToAction("Index", "Login");
+        }
 
         //      [HttpPost]
         //      [AllowAnonymous]
